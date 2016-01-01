@@ -16,6 +16,11 @@ class ViewController: UIViewController {
         return CGFloat(Float(arc4random()) /  Float(UInt32.max))
     }
     
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?){
+        view.endEditing(true)
+        super.touchesBegan(touches, withEvent: event)
+    }
+ 
     @IBOutlet weak var firstName: UITextField!
     
     @IBOutlet weak var lastName: UITextField!
